@@ -16,7 +16,7 @@
     var lines = items.map(function(line) {
       var pair = line.split('=');
       return pair[0].padEnd(20) + ' = ' + pair[1];
-    ));
+    });
     return lines.join('\n');
   }())
   document.getElementById('cookies').textContent = showCookies();
