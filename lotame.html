@@ -19,13 +19,15 @@
     });
     return lines.join('\n');
   }
-  document.getElementById('cookies').textContent = showCookies();
+  function onBodyLoad() {
+    document.getElementById('cookies').textContent = showCookies();
+  }
 </script>
 <script type="text/javascript" src="https://ad.crwdcntrl.net/5/c=14487/pe=y/callback=show"></script>
 
 </head>
 
-<body>
+<body onload="onBodyLoad()">
 
 <pre>
   <span id="json"></span>
