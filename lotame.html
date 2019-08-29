@@ -11,6 +11,15 @@
       document.getElementById("json").textContent = JSON.stringify(x, null, 2);
     });
   }
+  (function showCookies() {
+    var items = document.cookie.split(';');
+    var lines = items.map(function(line) {
+      var pair = line.split('=');
+      return pair[0].padEnd(20) + ' = ' + pair[1];
+    ));
+    return lines.join('\n');
+  }())
+  document.getElementById('cookies').textContent = showCookies();
 </script>
 <script type="text/javascript" src="https://ad.crwdcntrl.net/5/c=14487/pe=y/callback=show"></script>
 
@@ -20,6 +29,9 @@
 
 <pre>
 <span id="json"></div>
+</pre>
+
+<pre id="cookies">
 </pre>
 
 <hr/>
