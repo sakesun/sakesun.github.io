@@ -15,7 +15,7 @@
     var items = document.cookie.split(';');
     var lines = items.map(function(line) {
       var pair = line.split('=');
-      if (pair.length == 0) || (pair.length == 1 && !pair[0]) return '';
+      if ((pair.length == 0) || (pair.length == 1 && !pair[0])) return '';
       return pair[0].padEnd(20) + ' = ' + (pair[1] || '');
     });
     return lines.join('\n');
