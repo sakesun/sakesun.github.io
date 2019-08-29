@@ -15,7 +15,7 @@
     var items = document.cookie.split(';');
     var lines = items.map(function(line) {
       var pair = line.split('=');
-      if (pair.length == 0) return '';
+      if (pair.length == 0) || (pair.length == 1 && !pair[0]) return '';
       return pair[0].padEnd(20) + ' = ' + (pair[1] || '');
     });
     return lines.join('\n');
@@ -30,16 +30,21 @@
 
 <body onload="onBodyLoad()">
 
+<h2>Audience</h2>
 <pre>
   <span id="json"></span>
 </pre>
 
+<hr/>
+
+<h2>Cookies</h2>
 <pre>
   <span id="cookies"></span>
 </pre>
 
 <hr/>
 
+<h2>Behaviors</h2>
 <div>
   Impression (Behavior ID = 69858093)
   <img src="https://bcp.crwdcntrl.net/5/c=14488/b=69858093?https://www.lotame.com/wp-content/uploads/2016/01/data-collection-300x233.png" />
