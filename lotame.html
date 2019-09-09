@@ -6,11 +6,20 @@
     <title>Lotame</title>
 
     <script type="text/javascript" src="https://tags.crwdcntrl.net/c/14488/cc.js?ns=_cc14488" id="LOTCC_14488"></script>
-    <script type="text/javascript" language="javascript">_cc14488.bcp();</script>
+    <script type="text/javascript" language="javascript">
+      _cc14488.seg('seg', 'Test-Custom-Segment-Act-01');
+      _cc14488.bcp();
+    </script>
+
     <script>
-      function show(x) {
+      function showInteltion(x) {
         setTimeout(function() {
-          document.getElementById("json").textContent = JSON.stringify(x, null, 2);
+          document.getElementById("json-int").textContent = JSON.stringify(x, null, 2);
+        });
+      }
+      function showTMB(x) {
+        setTimeout(function() {
+          document.getElementById("json-tmb").textContent = JSON.stringify(x, null, 2);
         });
       }
       function showCookies() {
@@ -26,35 +35,28 @@
         document.getElementById('cookies').textContent = showCookies();
       }
     </script>
-    <script type="text/javascript" src="https://ad.crwdcntrl.net/5/c=14487/pe=y/callback=show"></script>
+
+    <script type="text/javascript" src="https://ad.crwdcntrl.net/5/c=14487/pe=y/callback=showInteltion"></script>
+    <script type="text/javascript" src="https://ad.crwdcntrl.net/5/c=14488/pe=y/callback=showTMB"></script>
 
   </head>
 
   <body onload="onBodyLoad()">
 
     <div>
-      <a href="https://bcp.crwdcntrl.net/5/c=14488/b=69858099?https://sakesun.github.io/clicked?segments=${aud_ids}">Click Me (Behavior ID = 69858099)</a>
+      <img src="https://bcp.crwdcntrl.net/5/c=14488/b=70448186" width="1" height="1"/>
     </div>
 
-    <hr/>
-
-    <div>
-      <a href="https://bcp.crwdcntrl.net/5/c=14488/b=69858101?https://sakesun.github.io/converted?segments=${aud_ids}">Conversion (Behavior ID = 69858101)</a>
-    </div>
-
-    <hr/>
-
-    <h2>Behaviors</h2>
-    <div>
-      Impression (Behavior ID = 69858093)
-      <img src="https://bcp.crwdcntrl.net/5/c=14488/b=69858093?https://www.simplycast.com/images/icons/channel_icons/web-tracking/128x128-icon-channel-webtracking-profile.png" />
-    </div>
-
-    <hr/>
-
-    <h2>Audience</h2>
+    <h2>Audience Inteltion</h2>
     <pre>
-      <span id="json"></span>
+      <span id="json-int"></span>
+    </pre>
+
+    <hr/>
+
+    <h2>Audience TMB</h2>
+    <pre>
+      <span id="json-tmb"></span>
     </pre>
 
     <hr/>
@@ -63,8 +65,6 @@
     <pre>
       <span id="cookies"></span>
     </pre>
-
-    <hr/>
 
   </body>
 
