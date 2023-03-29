@@ -1,0 +1,16 @@
+{
+  "short_name": "ttb-grc-demo",
+  "name": "TTB GRC Demo by Inteltionr",
+  "icons": [
+    {
+      "src": "inteltion-logo-96x96-1.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
